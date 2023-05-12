@@ -15,11 +15,11 @@ $file = "c:\windows\temp\Win10Upgrade.exe"
 $webClient.DownloadFile($url,$file) 
 Start-Process -FilePath $file -ArgumentList '/skipeula /auto upgrade /copylogs $dir'
 
-if ( $ShowGUI -eq "no" )
+if ( $ShowGUI -eq "yes" )
 {
-    Start-Process -FilePath $file -ArgumentList '/quietinstall /skipeula /auto upgrade /copylogs $dir'  
+    Start-Process -FilePath $file -ArgumentList '/skipeula /auto upgrade /copylogs $dir'  
 }
 else
 {
-    Start-Process -FilePath $file -ArgumentList '/skipeula /auto upgrade /copylogs $dir'
+    Start-Process -FilePath $file -ArgumentList '/quietinstall /skipeula /auto upgrade /copylogs $dir'
 }
