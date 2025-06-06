@@ -19,4 +19,4 @@ $html = ConvertFrom-Html -Content $result
 
 $PassmarkText = $html.selectNodes("/html/body/div[3]/div[1]/div/div[3]/div[2]/div[2]/div[1]/div/div[2]/div[3]")
 
-write-host $PassmarkText.InnerText.Trim()
+write-output $PassmarkText.InnerText.Trim()
